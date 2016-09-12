@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-  
+ 
+ 
+  <groupId>org.amir.test</groupId>
   <artifactId>pr1</artifactId>
-  <version>0.19-SNAPSHOT</version>
+  <version>0.21-SNAPSHOT</version>
 
- <packaging>pom</packaging>
-   <build>
+  <packaging>pom</packaging>
+  
+  <build>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -38,11 +37,32 @@
       </plugin>
     </plugins>
   </build>
-  
-	<scm>
-		<url>https://github.com/amirmendelson/pr1.git</url>
-		<connection>git@github.com:amirmendelson/pr1.git</connection>
-		<developerConnection>git@github.com:amirmendelson/pr1.git</developerConnection>
+
+<!-- 
+  mvn --batch-mode release:update-versions  
+ -->
+ 
+    <scm>
+		<url>scm:git:git@github.com:amirmendelson/pr1.git</url>
+		<connection>scm:git:git@github.com:amirmendelson/pr1.git</connection>
+		<developerConnection>scm:git:git@github.com:amirmendelson/pr1.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>    
+
+
 </project>
+
+
+<!-- 
+
+	<connection>scm:git:git@github.com:tobrien/git-demo.git</connection>
+	<url>scm:git:git@github.com:tobrien/git-demo.git</url>
+	<developerConnection>scm:git:git@github.com:tobrien/git-demo.git</developerConnection>
+
+<scm>
+  <connection>scm:git:ssh://git@git-eng.REDACTED.com|PROJECT_NAME/hello-world-service-minimal.git</connection>
+  <developerConnection>scm:git:ssh://git@git-eng.REDACTED.com|PROJECT_NAME/hello-world-service-minimal.git</developerConnection>
+  <url>http://git-eng.REDACTED.com/PROJECT_NAME/hello-world-service-minimal/tree/master</url>
+</scm>
+
+ -->
